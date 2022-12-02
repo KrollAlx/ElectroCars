@@ -1,4 +1,5 @@
 class ChargingSession < ApplicationRecord
-  has_one :connector
+  belongs_to :connector
   belongs_to :client
+  enum :state, [:active, :stopped]
 end

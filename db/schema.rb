@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_01_195547) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_02_121833) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_195547) do
     t.integer "amount"
     t.bigint "connector_id", null: false
     t.bigint "client_id", null: false
+    t.integer "state"
     t.index ["client_id"], name: "index_charging_sessions_on_client_id"
     t.index ["connector_id"], name: "index_charging_sessions_on_connector_id"
   end
